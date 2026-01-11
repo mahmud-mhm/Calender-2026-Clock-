@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendar 2026 with Digital Clock</title>
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#f2f2f2;
+    }
+
+    h1{
+        text-align:center;
+        margin:20px 0;
+    }
+
+    .container{
+        display:grid;
+        grid-template-columns: 3fr 1fr;
+        gap:20px;
+        padding:20px;
+    }
+
+    /* CALENDAR */
+    .year{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap:20px;
+    }
+
+    .month{
+        background:#fff;
+        padding:10px;
+        border-radius:10px;
+        box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .month h3{
+        text-align:center;
+        margin:10px 0;
+    }
+
+    .calendar{
+        display:grid;
+        grid-template-columns: repeat(7,1fr);
+        gap:5px;
+    }
+
+    .day, .date, .empty{
+        text-align:center;
+        padding:6px 0;
+        border-radius:5px;
+        font-size:0.9em;
+    }
+
+    .day{
+        background:#ddd;
+        font-weight:bold;
+    }
+
+    .date{
+        background:#3b9267;
+        color:#fff;
+    }
+
+    .empty{background:transparent;}
+
+    
+    /* CLOCK */
+     /* body{
+        margin:0;
+        height:100vh;
+        
+    } */
+
+    .clock{
+        background:#111;
+        color:#0f0;
+        border-radius:15px;
+        /* display:flex; */
+        align-items:center;
+        justify-content:center;
+        flex-direction: column;
+         padding:30px 40px;
+        height: fit-content;
+        position:sticky;
+        /* font-family: Arial, sans-serif; */
+        text-align:center;
+       
+        
+        background:#000;
+        box-shadow:0 0 20px rgba(0,255,0,0.5);
+    }
+
+    .time{
+        font-size:3em;
+        letter-spacing:2px;
+    }
+
+    .ampm {
+        font-size:1.3em;
+        margin-top:5px;
+    }
+
+    .date{
+        margin-top:15px;
+        font-size:1.2em;
+        color:#fff;
+    }
+
+    @media(max-width:900px){
+        .container{
+            grid-template-columns:1fr;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h1>Calendar 2026</h1>
+
+<div class="container">
+
+<!-- CALENDAR AREA -->
+<div class="year">
+
+<!-- JANUARY -->
+<div class="month"><h3>January</h3><div class="calendar">
+<div class="day">S</div><div class="day">M</div><div class="day">T</div><div class="day">W</div><div class="day">T</div><div class="day">F</div><div class="day">S</div>
+<div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
+<div class="date">1</div><div class="date">2</div><div class="date">3</div>
+<div class="date">4</div><div class="date">5</div><div class="date">6</div><div class="date">7</div><div class="date">8</div><div class="date">9</div><div class="date">10</div>
+<div class="date">11</div><div class="date">12</div><div class="date">13</div><div class="date">14</div><div class="date">15</div><div class="date">16</div><div class="date">17</div>
+<div class="date">18</div><div class="date">19</div><div class="date">20</div><div class="date">21</div><div class="date">22</div><div class="date">23</div><div class="date">24</div>
+<div class="date">25</div><div class="date">26</div><div class="date">27</div><div class="date">28</div><div class="date">29</div><div class="date">30</div><div class="date">31</div>
+</div></div>
+
+<!-- FEBRUARY -->
+<div class="month"><h3>February</h3><div class="calendar">
+<div class="day">S</div><div class="day">M</div><div class="day">T</div><div class="day">W</div><div class="day">T</div><div class="day">F</div><div class="day">S</div>
+<div class="date">1</div><div class="date">2</div><div class="date">3</div><div class="date">4</div><div class="date">5</div><div class="date">6</div><div class="date">7</div>
+<div class="date">8</div><div class="date">9</div><div class="date">10</div><div class="date">11</div><div class="date">12</div><div class="date">13</div><div class="date">14</div>
+<div class="date">15</div><div class="date">16</div><div class="date">17</div><div class="date">18</div><div class="date">19</div><div class="date">20</div><div class="date">21</div>
+<div class="date">22</div><div class="date">23</div><div class="date">24</div><div class="date">25</div><div class="date">26</div><div class="date">27</div><div class="date">28</div>
+</div></div>
+
+<!-- MARCH -->
+<div class="month"><h3>March</h3><div class="calendar">
+<div class="day">S</div><div class="day">M</div><div class="day">T</div><div class="day">W</div><div class="day">T</div><div class="day">F</div><div class="day">S</div>
+<div class="date">1</div><div class="date">2</div><div class="date">3</div><div class="date">4</div><div class="date">5</div><div class="date">6</div><div class="date">7</div>
+<div class="date">8</div><div class="date">9</div><div class="date">10</div><div class="date">11</div><div class="date">12</div><div class="date">13</div><div class="date">14</div>
+<div class="date">15</div><div class="date">16</div><div class="date">17</div><div class="date">18</div><div class="date">19</div><div class="date">20</div><div class="date">21</div>
+<div class="date">22</div><div class="date">23</div><div class="date">24</div><div class="date">25</div><div class="date">26</div><div class="date">27</div><div class="date">28</div>
+<div class="date">29</div><div class="date">30</div><div class="date">31</div>
+</div></div>
+
+
+<!-- APRIL -->
+<div class="month"><h3>April</h3><div class="calendar">
+<div class="day">S</div><div class="day">M</div><div class="day">T</div><div class="day">W</div><div class="day">T</div><div class="day">F</div><div class="day">S</div>
+<div class="empty"></div><div class="empty"></div><div class="empty"></div>
+<div class="date">1</div><div class="date">2</div><div class="date">3</div><div class="date">4</div>
+<div class="date">5</div><div class="date">6</div><div class="date">7</div><div class="date">8</div><div class="date">9</div><div class="date">10</div><div class="date">11</div>
+<div class="date">12</div><div class="date">13</div><div class="date">14</div><div class="date">15</div><div class="date">16</div><div class="date">17</div><div class="date">18</div>
+<div class="date">19</div><div class="date">20</div><div class="date">21</div><div class="date">22</div><div class="date">23</div><div class="date">24</div><div class="date">25</div>
+<div class="date">26</div><div class="date">27</div><div class="date">28</div><div class="date">29</div><div class="date">30</div>
+</div></div>
+
+
+<!-- MAY -->
+<div class="month"><h3>May</h3><div class="calendar">
+<div class="day">S</div><div class="day">M</div><div class="day">T</div><div class="day">W</div><div class="day">T</div><div class="day">F</div><div class="day">S</div>
+<div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
+<div class="date">1</div><div class="date">2</div>
+<div class="date">3</div><div class="date">4</div><div class="date">5</div><div class="date">6</div><div class="date">7</div><div class="date">8</div><div class="date">9</div>
+<div class="date">10</div><div class="date">11</div><div class="date">12</div><div class="date">13</div><div class="date">14</div><div class="date">15</div><div class="date">16</div>
+<div class="date">17</div><div class="date">18</div><div class="date">19</div><div class="date">20</div><div class="date">21</div><div class="date">22</div><div class="date">23</div>
+<div class="date">24</div><div class="date">25</div><div class="date">26</div><div class="date">27</div><div class="date">28</div><div class="date">29</div><div class="date">30</div>
+<div class="date">31</div>
+</div></div>
+
+<!-- JUNE -->
+<div class="month"><h3>June</h3><div class="calendar">
+<div class="day">S</div><div class="day">M</div><div class="day">T</div><div class="day">W</div><div class="day">T</div><div class="day">F</div><div class="day">S</div>
+<div class="empty"></div>
+<div class="date">1</div><div class="date">2</div><div class="date">3</div><div class="date">4</div><div class="date">5</div><div class="date">6</div>
+<div class="date">7</div><div class="date">8</div><div class="date">9</div><div class="date">10</div><div class="date">11</div><div class="date">12</div><div class="date">13</div>
+<div class="date">14</div><div class="date">15</div><div class="date">16</div><div class="date">17</div><div class="date">18</div><div class="date">19</div><div class="date">20</div>
+<div class="date">21</div><div class="date">22</div><div class="date">23</div><div class="date">24</div><div class="date">25</div><div class="date">26</div><div class="date">27</div>
+<div class="date">28</div><div class="date">29</div><div class="date">30</div>
+</div></div>
+
+
+<!-- JULY -->
+<div class="month"><h3>July</h3><div class="calendar">
+<div class="day">S</div><div class="day">M</div><div class="day">T</div><div class="day">W</div><div class="day">T</div><div class="day">F</div><div class="day">S</div>
+<div class="empty"></div><div class="empty"></div><div class="empty"></div>
+<div class="date">1</div><div class="date">2</div><div class="date">3</div><div class="date">4</div>
+<div class="date">5</div><div class="date">6</div><div class="date">7</div><div class="date">8</div><div class="date">9</div><div class="date">10</div><div class="date">11</div>
+<div class="date">12</div><div class="date">13</div><div class="date">14</div><div class="date">15</div><div class="date">16</div><div class="date">17</div><div class="date">18</div>
+<div class="date">19</div><div class="date">20</div><div class="date">21</div><div class="date">22</div><div class="date">23</div><div class="date">24</div><div class="date">25</div>
+<div class="date">26</div><div class="date">27</div><div class="date">28</div><div class="date">29</div><div class="date">30</div><div class="date">31</div>
+</div></div>
+
+<!-- AUGUST -->
+<div class="month"><h3>August</h3>
+    <div class="calendar">
+            <div class="day">S</div>
+            <div class="day">M</div>
+            <div class="day">T</div>
+            <div class="day">W</div>
+            <div class="day">T</div>
+            <div class="day">F</div>
+            <div class="day">S</div>
+
+
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+
+            <div class="date">1</div>
+            <div class="date">2</div>
+            <div class="date">3</div>
+            <div class="date">4</div>
+            <div class="date">5</div>
+            <div class="date">6</div>
+            <div class="date">7</div>
+            <div class="date">8</div>
+            <div class="date">9</div>
+            <div class="date">10</div>
+            <div class="date">11</div>
+            <div class="date">12</div>
+            <div class="date">13</div>
+            <div class="date">14</div>
+            <div class="date">15</div>
+            <div class="date">16</div>
+            <div class="date">17</div>
+            <div class="date">18</div>
+            <div class="date">19</div>
+            <div class="date">20</div>
+            <div class="date">21</div>
+            <div class="date">22</div>
+            <div class="date">23</div>
+            <div class="date">24</div>
+            <div class="date">25</div>
+            <div class="date">26</div>
+            <div class="date">27</div>
+            <div class="date">28</div>
+            <div class="date">29</div>
+            <div class="date">30</div>
+            <div class="date">31</div>
+        </div>
+
+    </div>
+
+
+    <!-- SEPTEMBER -->
+<div class="month"><h3>September</h3>
+    <div class="calendar">
+            <div class="day">S</div>
+            <div class="day">M</div>
+            <div class="day">T</div>
+            <div class="day">W</div>
+            <div class="day">T</div>
+            <div class="day">F</div>
+            <div class="day">S</div>
+
+            <div class="empty"></div>
+            <div class="empty"></div>
+            
+            <div class="date">1</div>
+            <div class="date">2</div>
+            <div class="date">3</div>
+            <div class="date">4</div>
+            <div class="date">5</div>
+            <div class="date">6</div>
+            <div class="date">7</div>
+            <div class="date">8</div>
+            <div class="date">9</div>
+            <div class="date">10</div>
+            <div class="date">11</div>
+            <div class="date">12</div>
+            <div class="date">13</div>
+            <div class="date">14</div>
+            <div class="date">15</div>
+            <div class="date">16</div>
+            <div class="date">17</div>
+            <div class="date">18</div>
+            <div class="date">19</div>
+            <div class="date">20</div>
+            <div class="date">21</div>
+            <div class="date">22</div>
+            <div class="date">23</div>
+            <div class="date">24</div>
+            <div class="date">25</div>
+            <div class="date">26</div>
+            <div class="date">27</div>
+            <div class="date">28</div>
+            <div class="date">29</div>
+            <div class="date">30</div>
+            
+        </div>
+
+    </div>
+
+    <!-- OCTOBER -->
+<div class="month"><h3>October</h3>
+    <div class="calendar">
+            <div class="day">S</div>
+            <div class="day">M</div>
+            <div class="day">T</div>
+            <div class="day">W</div>
+            <div class="day">T</div>
+            <div class="day">F</div>
+            <div class="day">S</div>
+
+
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            
+
+            <div class="date">1</div>
+            <div class="date">2</div>
+            <div class="date">3</div>
+            <div class="date">4</div>
+            <div class="date">5</div>
+            <div class="date">6</div>
+            <div class="date">7</div>
+            <div class="date">8</div>
+            <div class="date">9</div>
+            <div class="date">10</div>
+            <div class="date">11</div>
+            <div class="date">12</div>
+            <div class="date">13</div>
+            <div class="date">14</div>
+            <div class="date">15</div>
+            <div class="date">16</div>
+            <div class="date">17</div>
+            <div class="date">18</div>
+            <div class="date">19</div>
+            <div class="date">20</div>
+            <div class="date">21</div>
+            <div class="date">22</div>
+            <div class="date">23</div>
+            <div class="date">24</div>
+            <div class="date">25</div>
+            <div class="date">26</div>
+            <div class="date">27</div>
+            <div class="date">28</div>
+            <div class="date">29</div>
+            <div class="date">30</div>
+            <div class="date">31</div>
+        </div>
+
+    </div>
+
+    <!-- NOVEMBER -->
+<div class="month"><h3>November</h3>
+    <div class="calendar">
+            <div class="day">S</div>
+            <div class="day">M</div>
+            <div class="day">T</div>
+            <div class="day">W</div>
+            <div class="day">T</div>
+            <div class="day">F</div>
+            <div class="day">S</div>
+            
+            <div class="date">1</div>
+            <div class="date">2</div>
+            <div class="date">3</div>
+            <div class="date">4</div>
+            <div class="date">5</div>
+            <div class="date">6</div>
+            <div class="date">7</div>
+            <div class="date">8</div>
+            <div class="date">9</div>
+            <div class="date">10</div>
+            <div class="date">11</div>
+            <div class="date">12</div>
+            <div class="date">13</div>
+            <div class="date">14</div>
+            <div class="date">15</div>
+            <div class="date">16</div>
+            <div class="date">17</div>
+            <div class="date">18</div>
+            <div class="date">19</div>
+            <div class="date">20</div>
+            <div class="date">21</div>
+            <div class="date">22</div>
+            <div class="date">23</div>
+            <div class="date">24</div>
+            <div class="date">25</div>
+            <div class="date">26</div>
+            <div class="date">27</div>
+            <div class="date">28</div>
+            <div class="date">29</div>
+            <div class="date">30</div>
+            
+        </div>
+
+    </div>
+
+    <!-- December -->
+<div class="month"><h3>December</h3>
+    <div class="calendar">
+            <div class="day">S</div>
+            <div class="day">M</div>
+            <div class="day">T</div>
+            <div class="day">W</div>
+            <div class="day">T</div>
+            <div class="day">F</div>
+            <div class="day">S</div>
+
+
+            <div class="empty"></div>
+            <div class="empty"></div>
+            
+
+            <div class="date">1</div>
+            <div class="date">2</div>
+            <div class="date">3</div>
+            <div class="date">4</div>
+            <div class="date">5</div>
+            <div class="date">6</div>
+            <div class="date">7</div>
+            <div class="date">8</div>
+            <div class="date">9</div>
+            <div class="date">10</div>
+            <div class="date">11</div>
+            <div class="date">12</div>
+            <div class="date">13</div>
+            <div class="date">14</div>
+            <div class="date">15</div>
+            <div class="date">16</div>
+            <div class="date">17</div>
+            <div class="date">18</div>
+            <div class="date">19</div>
+            <div class="date">20</div>
+            <div class="date">21</div>
+            <div class="date">22</div>
+            <div class="date">23</div>
+            <div class="date">24</div>
+            <div class="date">25</div>
+            <div class="date">26</div>
+            <div class="date">27</div>
+            <div class="date">28</div>
+            <div class="date">29</div>
+            <div class="date">30</div>
+            <div class="date">31</div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CLOCK AREA -->
+<div class="clock">
+    <div class="time" id="time">00:00:00</div>
+    <div class="ampm" id="ampm">AM</div>
+    <div class="date" id="date">Sunday, 01 January 2026</div>
+</div>
+
+<script>
+function updateClock(){
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+    let ampm = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+
+    hours = hours.toString().padStart(2,"0");
+    minutes = minutes.toString().padStart(2,"0");
+    seconds = seconds.toString().padStart(2,"0");
+
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    const dayName = days[now.getDay()];
+    const date = now.getDate().toString().padStart(2,"0");
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    document.getElementById("time").innerText = `${hours}:${minutes}:${seconds}`;
+    document.getElementById("ampm").innerText = ampm;
+    document.getElementById("date").innerText = `${dayName}, ${date} ${month} ${year}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+</body>
+</html>
+
